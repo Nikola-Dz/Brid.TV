@@ -337,15 +337,49 @@
 			</ul>
 		</div>
 		
-		<h4 style="padding-left:25px">
-			Player_05
-		</h4>
+		<h4 style="padding-left:25px"> Player_05 </h4>
 		
 		<div id="brid-container">
 
+			<script>
+
+				function playConsoleLog() {
+					
+					var i = 1;
+
+					$bp().on('play', function () {
+					
+					console.log("%s Play " + i + " | " + $bp().currentTime() + " | " + new Date().toLocaleTimeString(), "▶️");
+					i++;
+				});
+				}
+
+
+				function pauseConsoleLog() {
+					
+					var i = 1;
+
+					$bp().on('pause', function () {
+					
+					console.log("%s Pause " + i + " | " + $bp().currentTime() + " | " + new Date().toLocaleTimeString(), "⏸️");
+					i++;
+				});
+				}
+
+			</script>
+
 			<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
-			<div id="Brid_69031668" class="brid" style="width:480;height:270;" > </div>
-			<script type="text/javascript"> $bp("Brid_69031668", {"id":"27616","width":"480","height":"270","video":"161514"}); </script>
+			<div id="Brid_69036961" class="brid" style="width:480;height:270;" > </div>
+			<script type="text/javascript">
+			
+				$bp("Brid_69036961", {"id":"27616","width":"480","height":"270","video":"161514"});
+
+				playConsoleLog();
+
+				pauseConsoleLog();
+			
+			</script>
+
 
 			<p style="padding: 10px;"></p>
 			<!--
