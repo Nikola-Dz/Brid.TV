@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Test title</title>
+	<link rel="icon" type="image/x-icon" href="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="//d2rz3gz50gnui2.cloudfront.net/css/release/10-foundation.css" />
+	<link rel="stylesheet" type="text/css" href="//d2rz3gz50gnui2.cloudfront.net/css/release/30-app.css" />
+	<script type="text/javascript" src="//d2rz3gz50gnui2.cloudfront.net/js/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fjalla+One" />
+	<style>
+		#preview-player {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -180px;
+			margin-left: -320px;
+			width: 640px;
+			height: 360px;
+		}
+	</style>
+</head>
+
+<body style="margin:0px; padding:0px;background-color:#fff;">
+	<!-- View/Previews/adunit.ctp -->
+	<style>
+		.hline,
+		.hline_debela_duga,
+		.hline_debela_kratka,
+		.hline_short {
+			height: 6px;
+			background-color: #f1f2f2;
+			width: 100%;
+			margin: 6px;
+			margin-bottom: 10px;
+			border-radius: 3px;
+			margin-top: 0px;
+		}
+
+		.hline_short {
+			width: 80%;
+		}
+
+		.hline_debela_duga {
+			width: 70%;
+			height: 16px;
+		}
+
+		.hline_debela_kratka {
+			width: 60%;
+			height: 16px;
+			margin-bottom: 16px;
+		}
+
+		.hline.white {
+			background-color: #fff;
+		}
+
+		.boxImg {
+			height: 90px;
+			width: 125px;
+			background-color: #fff;
+			float: left;
+			position: relative;
+			right: 0px;
+		}
+
+		.boxImgF {
+			height: 123px;
+			width: 128px;
+			background-color: #fff;
+			margin: 5px;
+			float: left;
+			top: 3px;
+			position: relative;
+		}
+
+		.imgImg {
+			background-color: #f1f2f2;
+			height: 90px;
+			width: 110px;
+			margin: 0 5px;
+			border-radius: 5px;
+		}
+
+		.small-block-grid-2 li {
+			padding: 10px;
+			padding: 25px;
+		}
+
+		h1 {
+			font-family: 'Fjalla One', Arial;
+			color: #000;
+			text-transform: uppercase;
+			font-size: 39px;
+		}
+
+		#sroll_logo {
+			position: relative;
+			/*background: url('/img/oustream_scroll.svg') no-repeat 0 0;*/
+			background-size: 46px 116px;
+			background-position: 0px 0px;
+			width: 46px;
+			height: 116px;
+			margin: 0px auto;
+			margin-top: 10px;
+			margin-bottom: 20px;
+
+		}
+
+		#logo {
+			position: relative;
+			/*background: url('/img/logo_tv.svg') no-repeat 0 0;*/
+			background-size: 36px 36px;
+			background-position: 0px 0px;
+			width: 39px;
+			left: -3px;
+			top: -3px;
+			cursor: pointer;
+			height: 39px;
+		}
+
+		.scroll {
+			border-bottom: 3px solid #ED1C24;
+			width: auto;
+			display: inline-block;
+			font-size: 16px;
+			font-family: Arial;
+		}
+
+		#console_container {
+			font-size: 11px;
+			margin-bottom: 10px;
+			height: 50%;
+			width: 20%;
+			overflow: scroll;
+			position: fixed;
+			bottom: 0px;
+			right: 20px;
+			background: white;
+			color: #222;
+			display: block;
+			padding: 10px;
+			z-index: 1000;
+			border: 1px solid #dedede;
+		}
+
+		#console_title {
+			width: 100%;
+			border-bottom: 1px solid #dedede;
+			padding: 5px;
+			text-align: center;
+			font-size: 16px;
+			font-family: 'Fjalla One', Arial;
+		}
+
+		#toggle {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			font-size: 42px;
+			height: 37px;
+			width: 50px;
+			padding-top: 12px;
+			cursor: pointer;
+		}
+
+		#brid-container {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+	<div style="width: 80%; margin:2% auto;">
+		<div class="text-center">
+			<table style="margin:0px auto">
+				<tr>
+					<td>
+						<div id="logo"></div>
+					</td>
+					<td>
+						<h1>Test title</h1>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<div class="scroll">Scroll down to see the demo</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<div id="sroll_logo"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<ul class="small-block-grid-2">
+				<li>
+					<div class="boxImg">
+						<div class="imgImg"></div>
+					</div>
+
+					<div class="hline_debela_duga"></div>
+					<div class="hline_debela_kratka"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline_short"></div>
+				</li>
+				<li>
+					<div class="boxImg">
+						<div class="imgImg"></div>
+					</div>
+
+					<div class="hline_debela_duga"></div>
+					<div class="hline_debela_kratka"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline_short"></div>
+				</li>
+				<li>
+					<div class="boxImg">
+						<div class="imgImg"></div>
+					</div>
+
+					<div class="hline_debela_duga"></div>
+					<div class="hline_debela_kratka"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline_short"></div>
+				</li>
+				<li>
+					<div class="boxImg">
+						<div class="imgImg"></div>
+					</div>
+
+					<div class="hline_debela_duga"></div>
+					<div class="hline_debela_kratka"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline_short"></div>
+				</li>
+				<li>
+					<div class="boxImg">
+						<div class="imgImg"></div>
+					</div>
+
+					<div class="hline_debela_duga"></div>
+					<div class="hline_debela_kratka"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline_short"></div>
+				</li>
+				<li>
+					<div class="boxImg">
+						<div class="imgImg"></div>
+					</div>
+
+					<div class="hline_debela_duga"></div>
+					<div class="hline_debela_kratka"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline_short"></div>
+				</li>
+				<li>
+					<div class="boxImg">
+						<div class="imgImg"></div>
+					</div>
+
+					<div class="hline_debela_duga"></div>
+					<div class="hline_debela_kratka"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline_short"></div>
+				</li>
+				<li>
+					<div class="boxImg">
+						<div class="imgImg"></div>
+					</div>
+
+					<div class="hline_debela_duga"></div>
+					<div class="hline_debela_kratka"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline white"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline"></div>
+					<div class="hline_short"></div>
+				</li>
+			</ul>
+		</div>
+		
+		<h4 style="padding-left:25px">
+			Test description
+		</h4>
+		
+		<div id="brid-container">
+
+			<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
+			<div id="Brid_69016317" class="brid" style="width:480;height:270;" > </div>
+			<script type="text/javascript">document.blockSimultaneousPlay = true; $bp("Brid_69016317", {"id":"27612","width":"480","height":"270","video":"161522"}); 
+			
+				
+			
+			</script>
+
+			<p style="padding: 10px;"></p>
+
+			<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
+			<div id="Brid_69016804" class="brid" style="width:480;height:270;" > </div>
+			<script type="text/javascript"> $bp("Brid_69016804", {"id":"27612","width":"480","height":"270","video":"161514"}); </script>
+
+			<p style="padding: 10px;"></p>
+
+			<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
+			<div id="Brid_69016869" class="brid" style="width:480;height:270;" > </div>
+			<script type="text/javascript"> $bp("Brid_69016869", {"id":"27612","width":"480","height":"270","video":"161513"}); </script>
+
+			<div style="margin-top:30px;">
+				<ul class="small-block-grid-2">
+					<li>
+						<div class="boxImg">
+							<div class="imgImg"></div>
+						</div>
+
+						<div class="hline_debela_duga"></div>
+						<div class="hline_debela_kratka"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline_short"></div>
+					</li>
+					<li>
+						<div class="boxImg">
+							<div class="imgImg"></div>
+						</div>
+
+						<div class="hline_debela_duga"></div>
+						<div class="hline_debela_kratka"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline_short"></div>
+					</li>
+					<li>
+						<div class="boxImg">
+							<div class="imgImg"></div>
+						</div>
+
+						<div class="hline_debela_duga"></div>
+						<div class="hline_debela_kratka"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline_short"></div>
+					</li>
+					<li>
+						<div class="boxImg">
+							<div class="imgImg"></div>
+						</div>
+
+						<div class="hline_debela_duga"></div>
+						<div class="hline_debela_kratka"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline_short"></div>
+					</li>
+					<li>
+						<div class="boxImg">
+							<div class="imgImg"></div>
+						</div>
+
+						<div class="hline_debela_duga"></div>
+						<div class="hline_debela_kratka"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline_short"></div>
+					</li>
+					<li>
+						<div class="boxImg">
+							<div class="imgImg"></div>
+						</div>
+
+						<div class="hline_debela_duga"></div>
+						<div class="hline_debela_kratka"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline white"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline"></div>
+						<div class="hline_short"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+</body>
+
+</html>
