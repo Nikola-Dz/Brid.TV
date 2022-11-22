@@ -343,9 +343,25 @@
 		
 		<div id="brid-container">
 
+			<script> 
+				
+				document.blockSimultaneousPlay = true;
+
+				if (document.blockSimultaneousPlay == true) {
+					
+					console.log("YES!");
+				}
+
+				if (document.blockSimultaneousPlay == false) {
+					
+					console.log("YES!");
+				}
+			
+			</script>
+
 			<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
 			<div id="Brid_69016317" class="brid" style="width:480;height:270;" > </div>
-			<script type="text/javascript"> document.blockSimultaneousPlay = true; $bp("Brid_69016317", {"id":"27612","width":"480","height":"270","video":"161522"}); </script>
+			<script type="text/javascript"> $bp("Brid_69016317", {"id":"27612","width":"480","height":"270","video":"161522"}); </script>
 
 			<p style="padding: 10px;"></p>
 

@@ -340,10 +340,24 @@
 		<h4 style="padding-left:25px"> Player_06 </h4>
 		
 		<div id="brid-container">
-
+			
 			<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
 			<div id="Brid_69106500" class="brid" style="width:480;height:270;" > </div>
-			<script type="text/javascript"> $bp("Brid_69106500", {"id":"27624","width":"480","height":"270","video":"161522","stickyDirection": "above/below"}); </script>
+			<script type="text/javascript">
+				
+				$bp("Brid_69106500", {"id":"27624","width":"480","height":"270","video":"161522"});
+
+				
+				$bp().on('play', function () { 
+
+					console.log("Text: " +  a);
+				});
+				
+
+			</script>
+
+			<p style="padding: 10px;"></p>
+
 
 			<div style="margin-top:30px;">
 				<ul class="small-block-grid-2">
