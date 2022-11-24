@@ -20,6 +20,7 @@
 
 			display: none;
 			text-align: center;
+			text-transform: uppercase;
 			border-bottom: 1px solid #000;
 			line-height: 0.1em;
 			margin: 10px 0 20px;
@@ -48,20 +49,20 @@
 				$bos().on('adImpression', function () {
 				
 					x.style.display = "block";
-					console.log("adStart: Show");
+					console.log("adImpression | Show");
 				});
 				
 
 				$bos().on('adEnd', function () {
 				
 					x.style.display = "none";
-					console.log("adEnd: Hide");
+					console.log("adEnd | Hide");
 				});
 				
 				$bos().on('adError', function () {
 				
 					x.style.display = "none";
-					console.log("adError: Hide");
+					console.log("adError | Hide");
 				});
 			
 			</script>
