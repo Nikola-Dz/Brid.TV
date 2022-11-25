@@ -33,39 +33,38 @@
 		}
 
 	</style>
-
+	
     <div id="divAdvertisement">
 
         <p id="pAdvertisement"><span> Advertisement </span></p>
 
-			<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.outstream.min.js"></script>
-			<div id="Brid_69298089" class="brid" > </div>
-			<script type="text/javascript">
+		<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.outstream.min.js"></script>
+		<div id="Brid_69298089" class="brid" > </div>
+		<script type="text/javascript">
+		
+			var x = document.getElementById("pAdvertisement");
 			
-				var x = document.getElementById("pAdvertisement");
-				
-				$bos("Brid_69298089", {"id":"2961","width":"480","height":"270"});
-				
-				$bos().on('adImpression', function () {
-				
-					x.style.display = "block";
-					console.log("adImpression | Show");
-				});
-				
-
-				$bos().on('adEnd', function () {
-				
-					x.style.display = "none";
-					console.log("adEnd | Hide");
-				});
-				
-				$bos().on('adError', function () {
-				
-					x.style.display = "none";
-					console.log("adError | Hide");
-				});
+			$bos("Brid_69298089", {"id":"2961","width":"480","height":"270"});
 			
-			</script>
+			$bos().on('adImpression', function () {
+			
+				x.style.display = "block";
+				console.log("adImpression | Show");
+			});
+			
+			$bos().on('adEnd', function () {
+			
+				x.style.display = "none";
+				console.log("adEnd | Hide");
+			});
+			
+			$bos().on('adError', function () {
+			
+				x.style.display = "none";
+				console.log("adError | Hide");
+			});
+		
+		</script>
 	</div>
     
 </body>
