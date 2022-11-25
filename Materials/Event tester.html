@@ -44,7 +44,7 @@
                 $('#brid-ready').addClass("active");
                 $('#ready-counter').text("1");
 
-                player = $bp("Brid_88964064");
+                player = $bp("Brid_69106500");
                 
                 player.add(['start','beforeStart','play','pause','ended','lastSecond','seeked','progress','playlistStart','skipped','playlistComplete','requestAd','adStart','adSkip','vpaidStart','adImpression','adFirstQuartile','adMidpoint','adThirdQuartile','adEnd','adComplete','adError','adPause','adResume', 'loadedmetadata','fullscreenchange','playerresize','timeupdate','progress','qualityChange','volumechange','mutechange'], function(event) {
                     var playerev = event.type.toLowerCase();
@@ -65,11 +65,13 @@
 
 
 
-<script type="text/javascript" src="//dev-services.brid.tv/player/build/brid.min.js"></script> <div id="Brid_88964064" class="brid" style="width:640;height:360;" > </div> 
-<script type="text/javascript"> 
-    var video_id = "155149";
-	player = $bp("Brid_88964064", {"id":"14017","width":"640","height":"360","video":video_id}, ready); 
-</script>
+                <script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
+                <div id="Brid_69106500" class="brid" style="width:480;height:270;" > </div>
+                <script type="text/javascript">
+                    
+                    $bp("Brid_69106500", {"id":"27624","width":"480","height":"270","video":"161522"},ready);
+                        
+                </script>
 
 
 
