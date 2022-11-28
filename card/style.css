@@ -1,20 +1,19 @@
 #div01 {
 
-	width: 280px;
-	height: 170px;
+	width: 480px;
+	height: 270px;
 
-	background-color: red;
-	transition: width 0.5s;
-	transition: height 0.5s;
+	background-color: blueviolet;
+	transition: all 0.5s ease-in-out;
 }
 
 
 #div01:hover {
 
-	width: 285px;
-	height: 175px;
+	width: 485px;
+	height: 275px;
 
-	background-color: red;
+	background-color: blueviolet;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: box-shadow 0.5s;
 }
