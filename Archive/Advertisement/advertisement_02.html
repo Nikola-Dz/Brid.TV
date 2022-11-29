@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title> Test title </title>
+	<title> Advertisement_02 </title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="//d2rz3gz50gnui2.cloudfront.net/css/release/10-foundation.css" />
@@ -337,35 +337,69 @@
 			</ul>
 		</div>
 		
-		<h4 style="padding-left:25px"> Outstream_incontent_ad_unit_03 </h4>
+		<h4 style="padding-left:25px"> Outstream_incontent_ad_unit_02 </h4>
 		
 		<div id="brid-container">
 
-			<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.outstream.min.js"></script>
-			<div id="Brid_69621889" class="brid" > </div>
-			<script type="text/javascript">
+			<style>
+
+				#divAdvertisement {
+		
+					width: 480px;
+					margin: auto;
+				}
+		
+				#pAdvertisement {
+
+					display: none;
+					text-align: center;
+					text-transform: uppercase;
+					color: lightgrey;
+					border-bottom: 1px solid lightgrey;
+					line-height: 0.1em;
+					margin: 10px 0 20px;
+				}
+		
+				#pAdvertisement span {
+		
+					background:#fff; 
+					padding:0 10px;
+				}
+		
+			</style>
 			
-				$bos("Brid_69621889", {"id":"2966","width":"480","height":"270"});
-
-				$bos().on('adImpression', function () {
+			<div id="divAdvertisement">
+		
+				<p id="pAdvertisement"><span> Advertisement </span></p>
+		
+				<script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.outstream.min.js"></script>
+				<div id="Brid_69298089" class="brid" > </div>
+				<script type="text/javascript">
+				
+					var x = document.getElementById("pAdvertisement");
 					
-					//x.style.display = "block";
-					console.log("adImpression | Show");
-				});
+					$bos("Brid_69298089", {"id":"2961","width":"480","height":"270"});
+					
+					$bos().on('adImpression', function () {
+					
+						x.style.display = "block";
+						console.log("adImpression | Show");
+					});
+					
+					$bos().on('adEnd', function () {
+					
+						x.style.display = "none";
+						console.log("adEnd | Hide");
+					});
+					
+					$bos().on('adError', function () {
+					
+						x.style.display = "none";
+						console.log("adError | Hide");
+					});
 				
-				$bos().on('adEnd', function () {
-				
-					//x.style.display = "none";
-					console.log("adEnd | Hide");
-				});
-				
-				$bos().on('adError', function () {
-				
-					//x.style.display = "none";
-					console.log("adError | Hide");
-				});
-
-			</script>
+				</script>
+			</div>
 
 			<div style="margin-top:30px;">
 				<ul class="small-block-grid-2">
