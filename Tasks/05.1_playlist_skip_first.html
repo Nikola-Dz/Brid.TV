@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/05_style.css">
+
+    <title> 05.1 Playlist (skip first) </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <h1> <span>05.1</span> Playlist (skip first) </h1>
+
+    <div>
+
+        <script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
+        
+        <div id="Brid_70329626" class="brid" style="width:480;height:270;"> </div>
+        
+        <h2 id="timer-counter"></h2>
+        <h2 id="abc"></h2>
+        
+        <script type="text/javascript">
+
+            $bp("Brid_70329626", {"id":"27672","width":"480","height":"270","playlist":"6662"});
+            var i = 5;
+            $bp().on('timeupdate', function () {
+
+                var current_time = new Date($bp().currentTime() * 1000).toISOString().substring(14, 19);
+                
+                document.getElementById("timer-counter").innerHTML = current_time;
+
+                if ($bp().currentIndex == 0 && Math.floor($bp().currentTime()) >= 16) {
+
+                    $bp().next();
+                }
+
+                if ($bp().currentSource.duration - $bp().currentTime() <= 6) {
+                    
+                    document.getElementById("abc").style.display = "inline-block";
+
+                    document.getElementById("abc").innerHTML = "Next video in " + Math.floor($bp().currentSource.duration - $bp().currentTime()) + "...";
+
+                    //console.log("i " + i + ": " + Math.floor($bp().currentSource.duration - $bp().currentTime()));
+                }
+            });
+
+            $bp().on('playlistComplete', function () {
+    
+                document.getElementById("timer-counter").innerHTML = "The End";
+            });
+            
+
+            $bp().on('start', function () {
+    
+                document.getElementById("Brid_70329626").style.border = "none";
+                document.getElementById("abc").style.display = "none";
+            });
+        
+        </script>
+
+    </div>
+</body>
+</html>

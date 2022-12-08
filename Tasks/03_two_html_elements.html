@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/03_style.css">
+
+    <title> 03 Two HTML elements </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <h1> <span>03</span> Two HTML elements </h1>
+
+    <div>
+        <script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
+        
+
+            <div id="Brid_69989236" class="brid" style="width:480;height:270;" >
+
+                <a id="learn-more-button" href="https://www.google.com" target="_blank"> Learn more </a>
+                <img id="close-button" src="images/close-button.png" alt="Close">
+
+            </div>
+            
+        
+        <script type="text/javascript">
+        
+            $bp("Brid_69989236", {"id":"27657","width":"480","height":"270","video":"161514"});
+
+            document.getElementById("close-button").addEventListener('click', function () {
+                
+                $bp().destroy();
+
+                console.log("Close");
+            });
+
+            $bp().on('start', function () {
+
+                document.getElementById("learn-more-button").style.display = "inline-block";
+                document.getElementById("close-button").style.display = "inline-block";
+
+                console.log("Video start");
+            });
+
+        </script>
+
+        <script type="text/javascript">
+
+        </script>
+    </div>
+</body>
+</html>
