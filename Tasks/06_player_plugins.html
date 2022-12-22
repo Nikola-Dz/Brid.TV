@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/06_style.css">
+
+    <title> 06 Player Plugins </title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+
+    <h1> <span>06</span> Player Plugins </h1>
+
+    <div>
+
+        <script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script> 
+        
+        <div id="Brid_70406149" class="brid" style="width:480;height:270;" > </div>
+        
+        <script type="text/javascript">
+        
+            $bp("Brid_70406149", {"id":"27673","width":"480","height":"270","video":"161582"});
+
+
+            var i = 1;
+            var arr = [];
+
+            Brid.event.add(document, 'bridpluginloaded', function(event) {
+            
+                var new_plugin = Object.keys(Brid.plugins).filter(x => !arr.includes(x));
+
+                console.log("Plugin " + (i++) + ": ", new_plugin[0]);
+
+                arr.push(new_plugin[0]);
+            });
+            
+        </script>
+
+    </div>
+</body>
+</html>

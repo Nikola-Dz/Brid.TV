@@ -1,0 +1,41 @@
+#watermark {
+    
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 136px;
+    height: 90px;
+    max-width: 25%;
+    max-height: 25%;
+    z-index: 2;
+
+    inset: 10px 10px auto auto;
+    /* opacity: 0.5; */ /*REVIEW - check */
+}
+
+#watermark:hover {
+
+    opacity: 0.3;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+
+#watermark img {
+    
+    /* position: absolute; */ /*REVIEW - check */
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    object-position: right top;
+}
+
+
+.brid-onad #watermark {
+    
+    display: none;
+}
+
+/* .brid-end-screen #watermark { 
+    
+    display: none;
+} */ /*REVIEW - check */

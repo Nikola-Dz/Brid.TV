@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/06_style.css">
+
+    <title> 06.1 Player Plugins </title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+
+    <h1> <span>06.1</span> Player Plugins </h1>
+
+    <div>
+
+        <script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script> 
+        
+        <div id="Brid_70406149" class="brid" style="width:480;height:270;" > </div>
+        
+        <script type="text/javascript"> 
+        
+            $bp("Brid_70406149", {"id":"27673","width":"480","height":"270","video":"161582"});
+
+            $bp().on('ready', function () {
+
+                /*
+                for (let i = 0; i < $bp().config.Plugin.length; i++) {
+
+                    console.log("Plugin " + (i+1) + "\n\n" + 
+                                "id:  " + $bp().config.Plugin[i].id + "\n" + 
+                                "url: " + $bp().config.Plugin[i].url + "\n\n");
+                }
+                
+                console.log("Plugin " + (3) + "\n\n" + 
+                                "id:  " + "bridparser" + "\n" + 
+                                "url: " + "https://dev-services.brid.tv/player/build/plugins/brid.parser.min.js" + "\n\n");
+                */
+
+
+                for (let i = 0; i < document.getElementsByClassName("bridload").length; i++) {
+
+                    var str = document.getElementsByClassName("bridload")[i].src;
+
+                    if (str.endsWith(".min.js")) {
+                        
+                        console.log("Plugin " + i + "\n\n" + 
+                                    "url: " + document.getElementsByClassName("bridload")[i].src + "\n\n");
+                    }
+                }
+
+
+                /*
+                var i = 0;
+
+                Brid.event.add(document, 'bridpluginloaded', function(event) {                    
+                
+                    //console.log(i++, event);
+                    //console.log("bridpluginloaded event end");    
+                    //console.log(Object.keys(Brid.plugins)[i]);
+
+                    console.log("Plugin " + (i+1) + "\n\n" + 
+                                "id:  " + Object.keys(Brid.plugins)[i] + "\n" + 
+                                "url: " + "placeholder" + "\n\n");
+
+                    i++;
+                });
+                */
+
+
+                /*
+                var i = 0;
+
+                setTimeout( () => {
+
+                    console.log(Object.keys(Brid.plugins))
+
+                    for (let i = 0; i < Object.keys(Brid.plugins).length; i++) {
+
+                        console.log("Plugin " + (i+1) + ": " + Object.keys(Brid.plugins)[i]);
+                    }
+            
+                }, 1000);
+                */
+
+                /*
+                Brid.event.add(document, 'bridpluginloaded', function(event) {                    
+
+                    //console.log("Plugin " + (i+1) + ": " + Object.keys(Brid.plugins)[i]);
+                    console.log(Object.keys(Brid.plugins));
+
+                    i++;
+                });
+                */
+            });
+            
+        </script>
+
+    </div>
+</body>
+</html>

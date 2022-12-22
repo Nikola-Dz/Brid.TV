@@ -1,0 +1,22 @@
+#ad_block_message {
+
+  width: 480px;
+  height: 50px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #ff2200;
+  text-align: center;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#ad_block_message p {
+
+  font-weight: bold;
+}

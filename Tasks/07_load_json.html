@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/07_style.css">
+
+    <title> 07 Load JSON </title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    
+    <h1> <span>07</span> Load JSON </h1>
+
+    <div>
+        
+        <div id="Brid_71111489" class="brid" style="width:480;height:270;" > </div>
+        
+    </div>
+
+    <script type="text/javascript" src="https://services.brid.tv/player/build/brid.min.js"></script>
+
+    <script type="text/javascript">
+
+        //ANCHOR - Get IDs
+        var urlRegexp = /https:\/\/services.brid.tv\/services\/get\/video\/(?<playerID>[0-9]{4,10})\/(?<videoID>[0-9]{4,10}).json/;
+
+        var jsonURL = "https://services.brid.tv/services/get/video/23142/654596.json";
+        var groups = jsonURL.match(urlRegexp).groups;
+
+
+        //ANCHOR - 1st Video
+        $bp("Brid_71111489", {"id":"38432","width":"480","height":"270","video":"1206835"}, function() {
+        
+            console.log('1st Video ready?', this.isReady);
+        });
+
+
+        $bp().on('ended', function () {
+
+            console.log("1st Video ended");
+            
+            $bp().destroy(true);
+
+
+            //ANCHOR - 2nd Video
+            $bp("Brid_71111489", {
+            
+                "id":groups.playerID,
+                
+                "video":groups.videoID
+
+            }, function() {
+
+                console.log('2nd Video ready?', this.isReady);
+                
+                console.log("2nd Video loaded");
+            });
+        });
+
+    </script>
+
+</body>
+</html>

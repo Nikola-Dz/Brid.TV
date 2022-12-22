@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/08_style.css">
+
+    <title> 08 Watermark </title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    
+    <h1> <span>08</span> Watermark </h1>
+
+    <div>
+        
+        <script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
+        
+        <div id="Brid_71526825" class="brid" style="width:480;height:270;" >
+        
+            <div id="watermark">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/863px-IMDB_Logo_2016.svg.png?20200406194337" alt="testingndz.com">
+            </div>
+        
+        </div>
+        
+        <script type="text/javascript">
+            
+            $bp("Brid_71526825", {"id":"27785","width":"480","height":"270","video":"161714"});
+
+            
+            $bp().on('requestAd', function () {
+                
+                console.log("requestAd, hide watermark");
+
+                document.getElementById("watermark").style.display = "none";
+            });
+
+
+            $bp().on('start', function () {
+                
+                console.log("start, show watermark");
+
+                document.getElementById("watermark").style.display = "block";
+            });
+
+            $bp().on('ended', function () {
+                
+                console.log("ended, hide watermark");
+
+                document.getElementById("watermark").style.display = "none";
+            });
+            
+        </script>
+        
+    </div>
+
+
+    </script>
+
+</body>
+</html>

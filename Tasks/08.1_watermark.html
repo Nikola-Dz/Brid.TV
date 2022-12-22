@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/08_style.css">
+
+    <title> 08.1 Watermark </title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    
+    <h1> <span>08.1</span> Watermark </h1>
+
+    <div>
+        
+        <script type="text/javascript" src="https://dev-services.brid.tv/player/build/brid.min.js"></script>
+        
+        <div id="Brid_71526825" class="brid" style="width:480;height:270;" >
+        
+            <div id="watermark">
+                <img id="watermark-img" src="" alt="">
+            </div>
+        
+        </div>
+        
+        <script type="text/javascript">
+            
+            $bp("Brid_71526825", {
+
+                "id":"27785",
+                "width":"480",
+                "height":"270",
+                "video":"161714",
+
+                "Watermark": {
+
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/863px-IMDB_Logo_2016.svg.png?20200406194337",
+                    "alt": "IMDb Logo",
+                    "opacity": "opacity...",
+                    "position": "position...",
+                    "offset": "offset..."
+                }
+            
+            }, function () {
+            
+                console.log("Watermark: ", this.config.Watermark);
+                console.log("url: ", this.config.Watermark.url);
+                console.log("alt: ", this.config.Watermark.alt);
+                console.log("opacity: ", this.config.Watermark.opacity);
+                console.log("position: ", this.config.Watermark.position);
+                console.log("offset: ", this.config.Watermark.offset);
+
+
+                document.getElementById("watermark-img").src = this.config.Watermark.url;
+                document.getElementById("watermark-img").alt = this.config.Watermark.alt;
+
+
+                document.getElementById("watermark-img").style.opacity = "0.5";
+            });
+
+            
+            
+            
+        </script>
+        
+    </div>
+
+
+    </script>
+
+</body>
+</html>
